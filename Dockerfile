@@ -1,3 +1,4 @@
-FROM httpd
-COPY index.html /usr/local/apache2/htdocs
+FROM php:7.4-cli
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
 EXPOSE 80
