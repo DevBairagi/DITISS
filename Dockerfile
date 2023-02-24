@@ -1,4 +1,3 @@
-FROM php:7.4-cli
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
+FROM php:7.0-apache
+COPY . /var/www/html
 EXPOSE 80
