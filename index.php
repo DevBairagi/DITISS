@@ -54,32 +54,7 @@
     }
   ?>
 
-<?php
-    include "connection.php";
-    session_start();
 
-    if(isset($_POST['username']) && isset($_POST['password']))
-    {
-      $uname = $_POST['username'];
-      $password = $_POST['password'];
-      
-      $query=mysqli_query($connection,"SELECT * FROM users WHERE username ='$uname' AND password ='$password'") or die("Query Unsuccessfull:".mysqli_error($connection));
-
-      if($query_run)
-      {
-        echo "Login Successfull";
-      }
-
-      $num_rows=mysqli_num_rows($query);
-      $row=mysqli_fetch_array($query);
-
-      if($num_rows > 0)
-      {
-        $_SESSION["id"]=$row['id'];
-        header("Location: profile.php?id=".$_SESSION["id"]);
-      }
-    }
-  ?>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
