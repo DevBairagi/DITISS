@@ -1,3 +1,3 @@
-FROM httpd
-COPY index.html /usr/local/apache2/htdocs
+FROM php:7.0-apache
+COPY . /var/www/html
 EXPOSE 80
