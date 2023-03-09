@@ -39,22 +39,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
-      <?php
-        if(isset($_POST['submit']))
-        {
-            $username = $_POST['username'];
-            $email = $_POST['email'];
-            $query = "UPDATE users SET username = '$username', email = '$email' WHERE id = '$id'";
-            $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-            header("Location: index.php");
-        }  
-        if(isset($_POST['logout']))
-        {
-            unset($_SESSION['id']);
-            session_destroy();
-            header("Location: index.php");
-        }            
-?>
+      
 
     <?php
         if(isset($_POST['submit']))
