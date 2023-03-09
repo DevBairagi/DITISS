@@ -41,6 +41,7 @@
       if($query_run)
       {
         echo "Login Successfull";
+        echo "Login Successfull";
       }
 
       $num_rows=mysqli_num_rows($query);
@@ -53,6 +54,7 @@
       }
     }
   ?>
+
 
 
 
